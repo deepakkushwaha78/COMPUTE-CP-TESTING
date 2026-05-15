@@ -6,7 +6,7 @@ provider "aws" {
 
 # Create S3 Bucket
 resource "aws_s3_bucket" "my_bucket" {
-  bucket = "deepak-demo-bucket-12345"
+  bucket = "deepak-demo-bucket-xx-12345"
 
   tags = {
     Name        = "MyS3Bucket"
