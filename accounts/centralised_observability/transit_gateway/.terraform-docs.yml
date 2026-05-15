@@ -1,0 +1,45 @@
+formatter: "markdown table"
+version: "0.19"
+
+header-from: main.tf
+footer-from: "variables.tf"
+
+recursive:
+  enabled: false
+  path: ""
+
+sections:
+  hide: ["providers"]
+  show: []
+
+content: ""
+
+output:
+  file: README.md
+  mode: inject
+  template: |-
+      <!-- BEGIN_AUTOMATED_TF_DOCS_BLOCK -->
+      {{ .Content }}
+      <!-- END_AUTOMATED_TF_DOCS_BLOCK -->
+
+output-values:
+  enabled: false
+  from: ""
+
+sort:
+  enabled: true
+  by: "required"
+
+settings:
+  anchor: true
+  color: true
+  default: true
+  description: true
+  escape: true
+  hide-empty: true
+  html: true
+  indent: 2
+  lockfile: true
+  required: true
+  sensitive: true
+  type: true
